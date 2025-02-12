@@ -127,11 +127,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</loc>
-    <lastmod>2023-09-07T16:12:37+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/docs/v.0.1.0/kad/what-is-nautilus-kad/</loc>
     <lastmod>2023-09-07T16:12:37+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -248,6 +243,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/docs/v.0.1.0/did/roadmap/</loc>
+    <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</loc>
     <lastmod>2023-09-07T16:12:37+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

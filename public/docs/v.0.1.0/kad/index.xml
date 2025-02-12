@@ -10,13 +10,6 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/v.0.1.0/kad/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Roadmap</title>
-      <link>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</link>
-      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</guid>
-      <description>&lt;p&gt;Nautilus KAD is a functional Rust-based Kademlia DHT that supports:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Decentralized Peer Discovery – Nodes can locate and connect with peers dynamically.&lt;/li&gt;&#xA;&lt;li&gt;XOR Distance-Based Routing – Efficient node lookups using logarithmic search complexity.&lt;/li&gt;&#xA;&lt;li&gt;Asynchronous Networking – Built with Tokio for non-blocking peer interactions.&lt;/li&gt;&#xA;&lt;li&gt;Message Serialization – Compact, efficient messages using bincode + serde.&lt;/li&gt;&#xA;&lt;li&gt;Basic Data Storage &amp;amp; Retrieval – Nodes can store and fetch values via &lt;code&gt;Store&lt;/code&gt; and &lt;code&gt;FindValue&lt;/code&gt; queries.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;limitations--areas-for-improvement&#34;&gt;Limitations &amp;amp; Areas for Improvement&lt;/h3&gt;&#xA;&lt;p&gt;While the core functionality is in place, there are several areas requiring enhancement:&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>What Is Nautilus KAD</title>
       <link>http://localhost:1313/docs/v.0.1.0/kad/what-is-nautilus-kad/</link>
       <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
@@ -36,6 +29,13 @@
       <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
       <guid>http://localhost:1313/docs/v.0.1.0/kad/nautilus-kad-vs.-others/</guid>
       <description>&lt;p&gt;While there are multiple Kademlia-based DHT implementations, Rust currently only has libp2p-kad, which is tightly integrated with the libp2p framework, making it difficult to use independently. Nautilus KAD was developed to address this gap by providing a standalone, modular, and high-performance Kademlia implementation that is not constrained by external dependencies, enabling greater flexibility and broader applicability in decentralized networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/kad/roadmap/</guid>
+      <description>&lt;p&gt;Nautilus KAD is a functional Rust-based Kademlia DHT that supports:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Decentralized Peer Discovery – Nodes can locate and connect with peers dynamically.&lt;/li&gt;&#xA;&lt;li&gt;XOR Distance-Based Routing – Efficient node lookups using logarithmic search complexity.&lt;/li&gt;&#xA;&lt;li&gt;Asynchronous Networking – Built with Tokio for non-blocking peer interactions.&lt;/li&gt;&#xA;&lt;li&gt;Message Serialization – Compact, efficient messages using bincode + serde.&lt;/li&gt;&#xA;&lt;li&gt;Basic Data Storage &amp;amp; Retrieval – Nodes can store and fetch values via &lt;code&gt;Store&lt;/code&gt; and &lt;code&gt;FindValue&lt;/code&gt; queries.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;limitations--areas-for-improvement&#34;&gt;Limitations &amp;amp; Areas for Improvement&lt;/h3&gt;&#xA;&lt;p&gt;While the core functionality is in place, there are several areas requiring enhancement:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

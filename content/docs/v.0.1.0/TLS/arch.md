@@ -65,4 +65,9 @@ Nautilus TLS follows a layered architecture, ensuring a clear separation between
 - Forward Secrecy (Planned) – Ensuring session keys remain secure even if a long-term key is compromised.
 - Session Resumption Optimization – Reducing handshake overhead for persistent connections.
 
+### Run-Through of TLS
+
+<iframe src="https://drive.google.com/file/d/1Tq9ruCgMtCK4GXeeXAtnEpm0AaLLZNVs/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+
+
 Nautilus TLS is built for security, modularity, and high-performance encrypted communication, ensuring adaptability for both traditional and decentralized secure networking applications.
