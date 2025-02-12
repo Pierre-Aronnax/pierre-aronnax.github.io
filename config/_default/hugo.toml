@@ -1,5 +1,5 @@
 title = "Pierre Aronnax"
-baseurl = "http://localhost/"
+baseurl = "https://pierre-aronnax.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
