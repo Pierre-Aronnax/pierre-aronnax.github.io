@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quanta on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/quanta/</link>
+    <description>Recent content in Quanta on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/quanta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Quanta?</title>
+      <link>http://localhost:1313/docs/quanta/what-is-quanta/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/quanta/what-is-quanta/</guid>
+      <description>Quanta is a proof-of-concept (POC) application that utilizes the Nautilus framework for secure, decentralized communication and file transfer.</description>
+    </item>
+    <item>
+      <title>Why It Matters?</title>
+      <link>http://localhost:1313/docs/quanta/why-it-matters/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/quanta/why-it-matters/</guid>
+      <description>Quanta demonstrates how Nautilus enables developers to build secure, decentralized applications with post-quantum cryptographic security.</description>
+    </item>
+  </channel>
+</rss>

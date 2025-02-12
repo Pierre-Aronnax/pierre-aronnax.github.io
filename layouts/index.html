@@ -1,0 +1,98 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if site.Params.doks.backgroundDots -}}
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  {{ end -}}
+
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-md section-features">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Secure the Future</h2>
+          <p>
+            Dive into decentralized innovation with robust security measures that protect your digital future and empower your organization.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Explore Decentralization</h2>
+          <p>
+            Embark on your journey with Nautilus by following our clear, step-by-step guide to integrate cutting-edge cryptography into your projects.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Optimize &amp; Perform</h2>
+          <p>
+            Maximize efficiency and security with optimized cryptographic settings and storage solutions designed for peak performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW LANDING PAGE CTA SECTION -->
+  <section class="section section-md bg-dark text-white text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="h3">Join the Nautilus Community</h2>
+          <p class="lead">
+            Be part of the future of secure, decentralized systems. Start building, collaborating, and contributing today!
+          </p>
+          <a class="btn btn-primary rounded-pill px-4 my-2" href="https://github.com/Pierre-Aronnax/nautilus" role="button">
+            Explore Nautilus on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- CONTRIBUTORS SECTION -->
+    <section class="section section-md bg-light text-center">
+      <div class="container">
+        <h2 class="h4 mb-4">Our Contributors</h2>
+        <div class="row justify-content-center">
+          {{ range .Site.Data.contributors }}
+          <div class="col-md-2 col-sm-3 col-4 mb-4">
+            <a href="{{ .html_url }}" target="_blank" class="d-block">
+              <img src="{{ .avatar_url }}" class="rounded-circle img-fluid border" style="width: 80px; height: 80px;" alt="{{ .login }}" title="{{ .login }}">
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+{{ if site.Params.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <h2 class="mt-2">Start building with Nautilus today</h2>
+      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}introduction/introduction-to-nautilus/" role="button">
+        {{ i18n "get-started" }}
+      </a>
+    </div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}

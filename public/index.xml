@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Project Nautilus on Pierre Aronnax</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Welcome to Project Nautilus on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post-Quantum Cryptography (PQC) and Its Role in Future Security</title>
+      <link>http://localhost:1313/blog/post-quantum-cryptography-pqc-and-its-role-in-future-security/</link>
+      <pubDate>Wed, 29 Jan 2025 16:27:22 +0200</pubDate>
+      <guid>http://localhost:1313/blog/post-quantum-cryptography-pqc-and-its-role-in-future-security/</guid>
+      <description>&lt;p&gt;The rapid advancement of quantum computing poses a significant threat to traditional cryptographic systems. Algorithms such as RSA, ECDSA, and Diffie-Hellman rely on mathematical problems that quantum computers will eventually solve efficiently, breaking encryption standards used today. Post-Quantum Cryptography (PQC) is being developed to mitigate this risk by introducing algorithms resistant to quantum attacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nautilus and What is it about</title>
+      <link>http://localhost:1313/docs/nautilus/nautilus-and-what-is-it-about/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/nautilus-and-what-is-it-about/</guid>
+      <description>Nautilus is a pioneering decentralized framework for developing dApps that utilize post-quantum cryptography (PQC) for security.</description>
+    </item>
+    <item>
+      <title>Why Does This Matter?</title>
+      <link>http://localhost:1313/docs/nautilus/why-does-this-matter/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/why-does-this-matter/</guid>
+      <description>Nautilus empowers developers to build a new generation of decentralized applications with post-quantum security.</description>
+    </item>
+    <item>
+      <title>Why Choose Nautilus?</title>
+      <link>http://localhost:1313/docs/nautilus/why-choose-nautilus/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/why-choose-nautilus/</guid>
+      <description>Nautilus is the first decentralized framework designed with post-quantum security, modular extensibility, and seamless interoperability.</description>
+    </item>
+    <item>
+      <title>Project References</title>
+      <link>http://localhost:1313/docs/reference/project-references/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/reference/project-references/</guid>
+      <description>A collection of references used throughout the Nautilus documentation.</description>
+    </item>
+    <item>
+      <title>Nautilus Releases</title>
+      <link>http://localhost:1313/docs/nautilus/nautilus-releases/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/nautilus-releases/</guid>
+      <description>This section provides detailed release notes, version history, and code documentation for Nautilus.</description>
+    </item>
+    <item>
+      <title>POC Production Model</title>
+      <link>http://localhost:1313/docs/v.0.1.0/poc-production-model/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/poc-production-model/</guid>
+      <description>This section provides detailed code documentation, feature breakdowns, and implementation details for the V.0.1.0 POC Production release.</description>
+    </item>
+    <item>
+      <title>Crates Structure</title>
+      <link>http://localhost:1313/docs/v.0.1.0/crates-structure/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/crates-structure/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Nautilus is a decentralized networking and security project composed of multiple modular crates, each responsible for a specific aspect of the ecosystem. Below is a table summarizing the different crates and their functionalities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introduction to Nautilus</title>
+      <link>http://localhost:1313/docs/introduction/introduction-to-nautilus/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/introduction/introduction-to-nautilus/</guid>
+      <description>An overview of the Nautilus framework, its core features, and why it matters.</description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/architecture/</guid>
+      <description>Exploring the core components and design principles of Nautilus V.0.1.0.</description>
+    </item>
+  </channel>
+</rss>

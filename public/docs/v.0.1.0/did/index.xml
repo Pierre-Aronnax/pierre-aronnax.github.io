@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus DID on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/did/</link>
+    <description>Recent content in Nautilus DID on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/did/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Nautilus DID</title>
+      <link>http://localhost:1313/docs/v.0.1.0/did/what-is-nautilus-did/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/did/what-is-nautilus-did/</guid>
+      <description>&lt;p&gt;Nautilus DID (Decentralized Identifier) is a self-sovereign identity (SSI) framework built to provide secure, verifiable, and decentralized identity management. It allows individuals, organizations, and systems to establish trustless identity authentication using cryptographic security, verifiable credentials (VCs), and decentralized identifiers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/did/architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/did/architecture/</guid>
+      <description>&lt;p&gt;Nautilus DID is built with a modular and extensible architecture, enabling seamless management of decentralized identities (DIDs), verifiable credentials (VCs), and cryptographic key management. The framework follows W3C DID standards while integrating post-quantum cryptography and trustless authentication.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/did/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/did/roadmap/</guid>
+      <description>Explore the phased roadmap for Nautilus DID, including security enhancements, interoperability, and decentralized identity expansion.</description>
+    </item>
+  </channel>
+</rss>

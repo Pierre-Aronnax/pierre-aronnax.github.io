@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus Registry on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/registry/</link>
+    <description>Recent content in Nautilus Registry on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/registry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nautilus Registry</title>
+      <link>http://localhost:1313/docs/v.0.1.0/registry/nautilus-registry/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/registry/nautilus-registry/</guid>
+      <description>&lt;p&gt;Nautilus Registry is a scalable, modular, and high-performance distributed registry designed to manage records across multiple storage backends. It supports in-memory and Redis-based storage, ensuring flexibility, fault tolerance, and efficient record retrieval.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/registry/architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/registry/architecture/</guid>
+      <description>&lt;p&gt;Nautilus Registry is designed as a scalable, sharded registry system, supporting multiple storage backends while ensuring high availability and efficient record management. The architecture is modular, allowing seamless integration with different storage mechanisms like in-memory caching and Redis-based persistence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nautilus Registry vs Others</title>
+      <link>http://localhost:1313/docs/v.0.1.0/registry/nautilus-registry-vs-others/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/registry/nautilus-registry-vs-others/</guid>
+      <description>&lt;p&gt;While various registry and key-value storage solutions exist in Rust, none are purpose-built for modular, sharded, and high-availability record management. Existing options either:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integrating new Backend</title>
+      <link>http://localhost:1313/docs/v.0.1.0/registry/integrating-new-backend/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/registry/integrating-new-backend/</guid>
+      <description>&lt;p&gt;Nautilus Registry is designed with a storage-agnostic architecture, allowing developers to extend it by implementing custom storage backends. This guide walks through the process of integrating an SQL-based storage backend while keeping compatibility with the existing registry system.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

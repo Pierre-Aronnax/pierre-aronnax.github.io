@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/introduction/</link>
+    <description>Recent content in Introduction on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Nautilus</title>
+      <link>http://localhost:1313/docs/introduction/introduction-to-nautilus/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/introduction/introduction-to-nautilus/</guid>
+      <description>An overview of the Nautilus framework, its core features, and why it matters.</description>
+    </item>
+    <item>
+      <title>Introduction to Quanta</title>
+      <link>http://localhost:1313/docs/introduction/introduction-to-quanta/</link>
+      <pubDate>Thu, 07 Sep 2023 16:06:50 +0200</pubDate>
+      <guid>http://localhost:1313/docs/introduction/introduction-to-quanta/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-quanta&#34;&gt;Introduction to Quanta&lt;/h2&gt;&#xA;&lt;p&gt;Quanta is our proof-of-concept (POC) application demonstrating the capabilities of Nautilus in a real-world use case. It serves as a decentralized chat and file transfer platform, utilizing Nautilus&amp;rsquo; networking stack to enable secure, peer-to-peer communication.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Architecture Summary</title>
+      <link>http://localhost:1313/docs/introduction/architecture-summary/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/introduction/architecture-summary/</guid>
+      <description>A high-level breakdown of Nautilus&amp;rsquo; architecture, covering networking, identity, and storage systems.</description>
+    </item>
+    <item>
+      <title>Core Principles</title>
+      <link>http://localhost:1313/docs/introduction/core-principles/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/introduction/core-principles/</guid>
+      <description>A breakdown of Nautilus&amp;rsquo; guiding principles: decentralization, security, modularity, and interoperability.</description>
+    </item>
+  </channel>
+</rss>

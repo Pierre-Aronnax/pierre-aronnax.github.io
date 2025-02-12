@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/">
+
+  <link rel="canonical" href="http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/">
+
+
+<title>Build a chat app with GraphQL and TypeScript: Part 1  |  Nautilus Docs</title>
+<meta name="description" content="If you&#39;re a little familiar with [GraphQL](https://graphql.org/), you&#39;ve probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we&#39;re going to build a simple chat application using Node.js and React with GraphQL.">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/">
+  <meta property="og:site_name" content="Nautilus Docs">
+  <meta property="og:title" content="Build a chat app with GraphQL and TypeScript: Part 1">
+  <meta property="og:description" content="If you&#39;re a little familiar with [GraphQL](https://graphql.org/), you&#39;ve probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we&#39;re going to build a simple chat application using Node.js and React with GraphQL.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2021-02-28T05:35:07+00:00">
+    <meta property="article:modified_time" content="2021-02-28T05:35:07+00:00">
+    <meta property="og:image" content="http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover.jpg">
+  <meta name="twitter:title" content="Build a chat app with GraphQL and TypeScript: Part 1">
+  <meta name="twitter:description" content="If you&#39;re a little familiar with [GraphQL](https://graphql.org/), you&#39;ve probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we&#39;re going to build a simple chat application using Node.js and React with GraphQL.">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Welcome to Project Nautilus",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/blog/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Build a Chat App With Graph Ql and Type Script Part 1",
+       "position": 3
+     }
+   ]
+ }
+</script>
+  
+	
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Build a chat app with GraphQL and TypeScript: Part 1",
+      "description": "If you\u0027re a little familiar with [GraphQL](https:\/\/graphql.org\/), you\u0027ve probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we\u0027re going to build a simple chat application using Node.js and React with GraphQL.",
+      "isPartOf": {
+        "@id": "http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/"
+      },
+      "datePublished": "2021-02-28T05:35:07+00:00",
+      "dateModified": "2021-02-28T05:35:07+00:00",
+      "image": [
+        {
+          "@id": "http://localhost:1313/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover.jpg"
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Thulite",
+        "url": "http://localhost:1313/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Thulite"
+      }
+    }
+  ]
+}
+</script>
+
+
+
+
+
+
+</head>
+
+  
+  <body class="single section blog" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">Nautilus Docs</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Nautilus Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/docs/introduction/introduction-to-nautilus/">Docs</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="http://localhost:1313/blog/" aria-current="true">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        <div class="dropdown mt-1 order-lg-2">
+          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="dropdown-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 5h7"></path>
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                <path d="M12 20l4 -9l4 9"></path>
+                <path d="M19.1 18h-6.2"></path>
+              </svg>
+              <span id="doks-language-current">English</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
+
+            <li><span class="dropdown-item current" aria-current="true">English</span></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            
+              
+            
+              
+          </ul>
+        </div>
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/Pierre-Aronnax/Nautilus/tree/master"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+<article>
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10">
+    <div class="blog-header">
+      <h1>Build a chat app with GraphQL and TypeScript: Part 1</h1>
+      <p>
+  <small>February 28, 2021&nbsp;by&nbsp;<a class="stretched-link position-relative" href="/contributors/pierre-aronnax/">Pierre Aronnax</a><span class="stretched-link position-relative reading-time text-nowrap" title="Estimated reading time"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 7v5l3 3"></path>
+      </svg>7&nbsp;minutes</span></small>
+</p>
+
+    </div>
+  </div>
+  <div class="col-md-13">
+        
+<picture>
+      <source type="image/webp" data-srcset="/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover_hu_96374c9e9c343615.webp 480w,/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover_hu_672a8f9636c9c146.webp 576w,/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover_hu_89fa315ed7fa8f8a.webp 768w,/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover_hu_7c5377c42fa05486.webp 1000w"
+        data-sizes="auto">
+  <img
+    src="data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAcAAph8J7ACdACTeJJEAP63c71KjbHZxJmsfp0lQexp9gfyuZ70mpeFCbJA3zKvDlaJvoytun4xH9PtmwJ6LPugArZXTtyai5WPxX&#43;AAAAA"
+    data-src="/blog/build-a-chat-app-with-graphql-and-typescript-part-1/cover_hu_9419f20593435b53.jpg"
+    width="1000"
+    height="420"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Build a chat app with GraphQL and TypeScript: Part 1"
+    class="lazyload blur-up img-post-single rounded-0"
+  >
+</picture>
+      </div>
+    <div class="col-md-12 col-lg-9">
+    <p>Hey there!</p>
+<p>If you&rsquo;re a little familiar with <a href="https://graphql.org/">GraphQL</a>, you&rsquo;ve probably heard of subscriptions and how useful they are in building real-time applications. In this series of blogs, we&rsquo;re going to build a simple chat application using Node.js and React with GraphQL. We&rsquo;ll use TypeScript throughout this series and will be following a code-first approach!</p>
+<h2 id="installing-dependencies">Installing dependencies</h2>
+<p>We&rsquo;ll be using <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a>, <a href="https://expressjs.com/">Express</a> and <a href="https://typegraphql.com/docs/introduction.html">TypeGraphQL</a> for this server.</p>
+<p>Developing a GraphQL API in Node.js with TypeScript is always a bit of a pain since you&rsquo;d have to manually create all your types, a lot of which will lead to redundancies later on, but TypeGraphQL really makes it easy using classes and decorator.</p>
+<p>Let&rsquo;s start by running <code>npm init -y</code> in a fresh new directory to generate our <code>package.json</code> and install the required dependencies.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn add apollo-server-express class-validator cors dotenv express graphql reflect-metadata type-graphql
+</span></span><span class="line"><span class="cl">yarn add -D @types/cors @types/express @types/node typescript</span></span></code></pre></div>
+  </figure>
+</div>
+<p>We&rsquo;re basically using Express as a middleware integration for Apollo Server using the <a href="https://github.com/apollographql/apollo-server">apollo-server-express</a> package. Once all your dependencies are installed, create a <code>src</code> folder. This is where all our TS files will exist. That&rsquo;ll help us easily manage compilation.</p>
+<p>We&rsquo;ll also need a <code>tsconfig.json</code> file to setup TypeScript to our liking. There&rsquo;s an awesome utility by <a href="https://twitter.com/benawad">Ben Awad</a> which can automatically generate this for you. Run <code>npx tsconfig.json</code> and select <code>node</code>. Now we&rsquo;re all set to code up our GraphQL API!</p>
+<p>We&rsquo;ll be following the file structure described below!</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>├── server
+│		├── src
+│		│   ├── entities
+│		|   |   ├── Chat.ts
+│		│   ├── resolvers
+│		|   |   ├── chat.ts
+│		│   ├── index.ts
+│		├── package.json
+│		├── tsconfig.json
+│		├── .env</code></pre>
+  </figure>
+</div>
+<h2 id="building-our-server">Building our server</h2>
+<p>Create an <code>index.ts</code> file and initialize our server using the code below,</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s2">&#34;reflect-metadata&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ApolloServer</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;apollo-server-express&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">express</span> <span class="kr">from</span> <span class="s2">&#34;express&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">buildSchema</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;type-graphql&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">cors</span> <span class="kr">from</span> <span class="s2">&#34;cors&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dotenv</span> <span class="kr">from</span> <span class="s2">&#34;dotenv&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">dotenv</span><span class="p">.</span><span class="nx">config</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">main</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">({</span> <span class="nx">origin</span><span class="o">:</span> <span class="s2">&#34;http://localhost:3000&#34;</span><span class="p">,</span> <span class="nx">credentials</span>: <span class="kt">true</span> <span class="p">}));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">apolloServer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ApolloServer</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">schema</span>: <span class="kt">await</span> <span class="nx">buildSchema</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">resolvers</span><span class="o">:</span> <span class="p">[</span><span class="nx">ChatResolver</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">validate</span>: <span class="kt">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">apolloServer</span><span class="p">.</span><span class="nx">applyMiddleware</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">app</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">cors</span>: <span class="kt">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="sb">`Server ready at http://localhost:</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="si">}${</span><span class="nx">apolloServer</span><span class="p">.</span><span class="nx">graphqlPath</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">main</span><span class="p">().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Let&rsquo;s breakdown what we just wrote. We initialized our server inside an async <code>main()</code> function, just in case we need to <code>await</code> anything, and declared an express application, <code>app</code>. We also allowed cors from <code>localhost:3000</code>, which is where we&rsquo;ll run our React app later on. Also, do keep in mind to import the <code>reflect-metadata</code> shim package before importing <code>type-graphql</code> or any of your resolvers.</p>
+<p>We then made a new instance of <code>ApolloServer</code> and applied our express middleware to that. Finally, we started our server, using <code>app.listen()</code>. We&rsquo;re also using <code>dotenv</code> to load env variables, namely <code>PORT</code>, from our <code>.env</code> file. For this example, we&rsquo;ll consider <code>PORT=9000</code>.</p>
+<p>But as you&rsquo;ve probably noticed by now, this won&rsquo;t run, since we don&rsquo;t have a <code>ChatResolver</code> yet. In fact, we don&rsquo;t have any resolvers for our GraphQL API yet, so let&rsquo;s go ahead and make a resolver.</p>
+<p>But before that, we need to define our entity. Think of this as the universal type on which you&rsquo;ll write your GraphQL resolvers, i.e queries, mutations, and subscriptions as well as your database operations. This is exactly where TypeGraphQL comes in handy. We won&rsquo;t be using a database here, since our chat system will be ephemeral, but you get the idea!</p>
+<h2 id="defining-our-entity">Defining our entity</h2>
+<p>So create the <code>entities/Chat.ts</code> file and define our <code>Chat</code> entity using the following code!</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ObjectType</span><span class="p">,</span> <span class="nx">Field</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;type-graphql&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">@ObjectType</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">Chat</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">@Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">id</span>: <span class="kt">number</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">@Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">message</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">@Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Alright, let&rsquo;s understand what we just wrote! We defined an exported TypeScript class <code>Chat</code> with multiple decorators. The class has three property members, <code>id</code>, <code>message</code>, and <code>name</code>, each with their own types. This is pretty straightforward, but let&rsquo;s understand what those decorators accomplish.</p>
+<p>The main idea behind using TypeGraphQL decorators is to automatically create GraphQL schema definitions from TypeScript classes in SDL(schema definition language). This eliminates the need to make schema definition files and their equivalent interfaces in TypeScript.</p>
+<p>Here, the first thing we did was decorate the <code>Chat</code> class with the <code>@ObjectType</code> decorator. It marks the class as <code>type</code> from the GraphQL SDL or <code>GraphQLObjectType</code> from <code>graphql-js</code>. Then we declared class properties that need to be mapped to the GraphQL fields. To do this, we use the <code>@Field</code> decorator, which is also used to collect metadata from the TypeScript type reflection system. By default all the fields in our entity here are non-nullable!</p>
+<p>This entity will result in the generation of the following part of the GraphQL schema in the SDL.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">type</span> <span class="nx">Chat</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">id</span>: <span class="kt">Float</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">message</span>: <span class="kt">String</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span>: <span class="kt">String</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>As you can see all fields are required(<code>!</code>) here, i.e non-nullable!</p>
+<p>We&rsquo;ve now successfully defined a GraphQL schema and its types for each of our chats! Now let&rsquo;s define a GraphQL resolver on our <code>Chat</code> entity.</p>
+<h2 id="queries-and-mutations">Queries and Mutations</h2>
+<p>Create a <code>resolvers/chat.ts</code> file and type in the following,</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Mutation</span><span class="p">,</span> <span class="nx">Query</span><span class="p">,</span> <span class="nx">Resolver</span><span class="p">,</span> <span class="nx">Arg</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;type-graphql&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Chat</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;../entities/Chat&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">chats</span>: <span class="kt">Chat</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">@Resolver</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">ChatResolver</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">@Query</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="nx">Chat</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">getChats</span><span class="p">()</span><span class="o">:</span> <span class="nx">Chat</span><span class="p">[]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">chats</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">@Mutation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">Chat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">createChat</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">@Arg</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">)</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">@Arg</span><span class="p">(</span><span class="s2">&#34;message&#34;</span><span class="p">)</span> <span class="nx">message</span>: <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span><span class="o">:</span> <span class="nx">Chat</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">chat</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">id</span>: <span class="kt">chats.length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">message</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chats</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">chat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>That&rsquo;s a lot of new code so let&rsquo;s understand what we&rsquo;re doing here. Aside from GraphQL object types, TypeGraphQL also allows us to create GraphQL queries, mutations, and subscriptions in a REST controller type fashion.</p>
+<p>First, we define an array based on the <code>Chat</code> entity which will basically act as our database. Then we define an exported class <code>ChatResolver</code> with the methods, <code>getChat()</code>, which returns our entire chat array and <code>createChat()</code>, which appends a new chat object to the end of our array by taking the arguments, <code>name</code> and <code>message</code>. Now that we understand the normal functionality of this class, let&rsquo;s understand what those decorators add in.</p>
+<p>The first decorator, <code>@Resolver()</code>, makes the class behave like a classic REST controller. Thus, the methods inside this class can now act like GraphQL query, mutation, and subscription handlers.</p>
+<p>This brings us to the next decorators, which are <code>@Query(() =&gt; [Chat])</code> and <code>@Mutation(() =&gt; Chat)</code>, which lets us mark our resolver class methods as a GraphQL query or mutation resolver. We also need to explicitly declare the type that those methods resolve to, i.e, their return type, which here is an array of <code>Chat</code> objects for <code>getChats()</code> and a single object for <code>createChat()</code>.</p>
+<p>Finally, there&rsquo;s the inline <code>@Arg()</code> decorator, which lets us specify the arguments for a particular GraphQL query/mutation. We pass in the name of those arguments in this decorator.</p>
+<p>Woohoo! Our resolver is now workable! Let&rsquo;s go ahead and try to run our server! But first, import the <code>ChatResolver</code> in <code>index.ts</code> and add the following scripts into <code>package.json</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;watch&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc -w&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;nodemon dist/index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;node dist/index.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Finally, fire up your terminal and run <code>yarn watch</code> in one and <code>yarn dev</code> in another! The watch command basically allows you to make changes in your TS files, which immediately get compiled into JS files inside a <code>dist/</code> directory. Then we use <code>nodemon</code>, to run our compiled JS files and also restart on any changes. This results in a pretty near to prod dev environment!</p>
+<p>Visit <code>localhost:9000/graphql</code> to view your GraphQL playground where you can run your queries!</p>
+<h2 id="running-graphql-operations-in-graphql-playground">Running GraphQL operations in GraphQL Playground</h2>
+<p>Now, visit <code>localhost:9000/graphql</code> to view your GraphQL Playground, and let&rsquo;s execute our queries and mutations.</p>
+<p>To add a new chat, you&rsquo;ll run the following mutation:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-graphql" data-lang="graphql"><span class="line"><span class="cl"><span class="kd">mutation</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nc">createChat</span><span class="p">(</span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;John&#34;</span><span class="p">,</span><span class="w"> </span><span class="nc">message</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;first chat&#34;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nc">id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">message</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>and to get all chats, you&rsquo;ll run the following query</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-graphql" data-lang="graphql"><span class="line"><span class="cl"><span class="kd">query</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nc">getChats</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">message</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>As you can see, our class methods have turned into actual GraphQL operations which take in arguments and return <code>Chat</code> object fields! Do keep in mind that since we&rsquo;re storing our chats in an in-memory array, all your chats will disappear the moment you restart your server.</p>
+<p>In the next part, we&rsquo;ll explore how to add a subscription to our new GraphQL API!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Visit the next post of this series to learn about GraphQL subscriptions and how to add them!</p>
+<p>If you&rsquo;d like to dig deeper into GraphQL, Apollo Server and TypeGraphQL and discover all the cool things you can make with it, read the official docs,</p>
+<p><a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server Docs</a></p>
+<p><a href="https://typegraphql.com/docs/introduction.html">TypeGraphQL Docs</a></p>
+<p><a href="https://graphql.org/learn/">GraphQL Docs</a></p>
+<p>Also, here&rsquo;s an <a href="https://github.com/chentsulin/awesome-graphql">awesome list of resources</a> to learn further!</p>
+<p>If you get stuck here&rsquo;s the <a href="https://github.com/saswatamcode/graphQLChat">repo</a> with all the code! Visit the <code>part-1</code> branch to get the code covered in this post.</p>
+<p>For any queries reach out to my <a href="https://twitter.com/saswatamcode">socials</a> or <a href="https://github.com/saswatamcode">GitHub</a>!</p>
+
+    </div>
+</div>
+</article>
+
+      
+      </div>
+    </div>
+    
+    
+
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Brought to you by <a class="text-muted" href="https://thulite.io/">Thulite</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.14671a43b207e9db859f0c1800d045e1d61dbf1b7a4af135ba8438c71517fb97.js"
+  integrity="sha256-FGcaQ7IH6duFnwwYANBF4dYdvxt6SvE1uoQ4xxUX&#43;5c=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>
