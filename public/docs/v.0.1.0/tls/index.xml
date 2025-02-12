@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus TLS on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/tls/</link>
+    <description>Recent content in Nautilus TLS on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/tls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Nautilus TLS</title>
+      <link>http://localhost:1313/docs/v.0.1.0/tls/what-is-nautilus-tls/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/tls/what-is-nautilus-tls/</guid>
+      <description>&lt;p&gt;Nautilus TLS is a Rust-based secure communication protocol designed to provide encrypted transport, authentication, and key exchange for secure connections. Unlike traditional TLS implementations, Nautilus TLS is optimized for asynchronous Rust applications, offering a modular and customizable security framework.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/tls/architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/tls/architecture/</guid>
+      <description>&lt;p&gt;Nautilus TLS follows a layered architecture, ensuring a clear separation between handshake negotiation, session management, encrypted data transmission, and connection handling. This modular approach allows for scalability, security enhancements, and future extensibility while maintaining high performance in asynchronous environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/tls/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/tls/roadmap/</guid>
+      <description>&lt;p&gt;Nautilus TLS is a functional, post-quantum-ready TLS implementation with:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Kyber-based Key Exchange – Provides quantum-resistant secure session establishment.&lt;/li&gt;&#xA;&lt;li&gt;AES-GCM Encrypted Data Transmission – Ensures low-latency, high-security message encryption.&lt;/li&gt;&#xA;&lt;li&gt;Asynchronous Architecture – Built on Tokio for efficient, concurrent secure connections.&lt;/li&gt;&#xA;&lt;li&gt;Session Management – Tracks cipher suites, encryption keys, and handshake states.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;limitations--areas-for-improvement&#34;&gt;Limitations &amp;amp; Areas for Improvement&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No Forward Secrecy – Needs ephemeral key exchange mechanisms.&lt;/li&gt;&#xA;&lt;li&gt;No Session Resumption – Handshakes occur on every connection, increasing latency.&lt;/li&gt;&#xA;&lt;li&gt;Limited Cipher Suite Support – Currently fixed to Kyber + AES-GCM, with no flexibility.&lt;/li&gt;&#xA;&lt;li&gt;No Transport-Layer Integration – Cannot yet integrate with QUIC or UDP-based protocols.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;phase-1-core-enhancements&#34;&gt;Phase 1: Core Enhancements&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Session Resumption &amp;amp; Optimization&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Introduce session tickets for faster reconnections without full handshakes.&lt;/li&gt;&#xA;&lt;li&gt;Optimize session caching to minimize computation overhead.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Configurable Cipher Suites&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Extend support for ChaCha20-Poly1305 &amp;amp; post-quantum encryption.&lt;/li&gt;&#xA;&lt;li&gt;Enable pluggable cipher suite negotiation between peers.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;phase-2-security--performance-upgrades&#34;&gt;Phase 2: Security &amp;amp; Performance Upgrades&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Forward Secrecy (Ephemeral Key Exchange)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implement Diffie-Hellman-based key exchange with frequent key rotations.&lt;/li&gt;&#xA;&lt;li&gt;Ensure session key confidentiality, even if long-term keys are compromised.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Transport-Layer Integration (TLS over QUIC)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Enable Nautilus TLS over QUIC, improving performance for real-time &amp;amp; low-latency applications.&lt;/li&gt;&#xA;&lt;li&gt;Implement UDP-based encrypted transport, making TLS more adaptable for decentralized networks.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Zero-Knowledge Proof Authentication (Experimental)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Introduce ZKP-based authentication to verify identities without revealing sensitive information.&lt;/li&gt;&#xA;&lt;li&gt;Strengthen privacy &amp;amp; resistance against man-in-the-middle attacks.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;phase-3-advanced-features--long-term-scalability&#34;&gt;Phase 3: Advanced Features &amp;amp; Long-Term Scalability&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Decentralized Identity Integration&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Support DID (Decentralized Identifiers) for peer authentication.&lt;/li&gt;&#xA;&lt;li&gt;Enable blockchain-backed certificate verification.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Quantum-Safe Encryption &amp;amp; Hybrid Protocols&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implement post-quantum encryption algorithms beyond Kyber (e.g., FrodoKEM, BIKE).&lt;/li&gt;&#xA;&lt;li&gt;Support hybrid encryption models, combining classical &amp;amp; post-quantum security.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;AI-Optimized Cipher Negotiation&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use machine learning to optimize cipher suite selection based on network conditions.&lt;/li&gt;&#xA;&lt;li&gt;Automate adaptive security levels based on risk assessment.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;&#xA;&lt;p&gt;The Nautilus TLS roadmap is focused on enhancing security, performance, and scalability, making it a future-proof TLS implementation for modern, decentralized, and post-quantum applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

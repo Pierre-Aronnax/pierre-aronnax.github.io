@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus PKI on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/pki/</link>
+    <description>Recent content in Nautilus PKI on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/pki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Nautilus PKI</title>
+      <link>http://localhost:1313/docs/v.0.1.0/pki/what-is-nautilus-pki/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/pki/what-is-nautilus-pki/</guid>
+      <description>A detailed explanation of how Nautilus PKI ensures secure communication, authentication, and cryptographic key management.</description>
+    </item>
+    <item>
+      <title>Crate Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/pki/crate-architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/pki/crate-architecture/</guid>
+      <description>Learn how Nautilus PKI is structured, how it uses Rust traits for extensibility, and how it integrates various cryptographic schemes.</description>
+    </item>
+    <item>
+      <title>Integrating New Schemes</title>
+      <link>http://localhost:1313/docs/v.0.1.0/pki/integrating-new-schemes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/pki/integrating-new-schemes/</guid>
+      <description>&lt;p&gt;Nautilus PKI is designed with a modular and extensible architecture, enabling developers to add their own cryptographic schemes without modifying the core infrastructure. By leveraging Rust traits, new PKI implementations can seamlessly integrate into the system while maintaining compatibility with existing schemes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/pki/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/pki/roadmap/</guid>
+      <description>Explore the phased development roadmap for Nautilus PKI, including enhancements to cryptographic schemes, security, and performance.</description>
+    </item>
+  </channel>
+</rss>

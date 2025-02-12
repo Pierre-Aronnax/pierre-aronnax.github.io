@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/reference/</link>
+    <description>Recent content in Reference on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project References</title>
+      <link>http://localhost:1313/docs/reference/project-references/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/reference/project-references/</guid>
+      <description>A collection of references used throughout the Nautilus documentation.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus mDNS on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/mdns/</link>
+    <description>Recent content in Nautilus mDNS on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/mdns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Nautilus mDNS</title>
+      <link>http://localhost:1313/docs/v.0.1.0/mdns/what-is-nautilus-mdns/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/mdns/what-is-nautilus-mdns/</guid>
+      <description>Learn how Nautilus mDNS provides automatic, decentralized service discovery using Multicast DNS (mDNS).</description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/mdns/architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/mdns/architecture/</guid>
+      <description>Understand how Nautilus mDNS is structured, including its packet processing, service registry, and event-driven architecture.</description>
+    </item>
+    <item>
+      <title>Nautilus mDNS vs. Others</title>
+      <link>http://localhost:1313/docs/v.0.1.0/mdns/nautilus-mdns-vs.-others/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/mdns/nautilus-mdns-vs.-others/</guid>
+      <description>&lt;p&gt;While existing Rust-based mDNS solutions like &lt;code&gt;mdns-sd&lt;/code&gt; and &lt;code&gt;libmdns&lt;/code&gt; provide basic service discovery, they often come with limitations in flexibility, extensibility, and long-term viability. Nautilus mDNS was built to overcome these challenges while offering a future-proof, high-performance service discovery mechanism.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/mdns/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/mdns/roadmap/</guid>
+      <description>&lt;p&gt;Nautilus mDNS is a fully functional decentralized service discovery framework with:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic mDNS Service Discovery – Devices can register and query services dynamically.&lt;/li&gt;&#xA;&lt;li&gt;Multicast-Based Name Resolution – Resolves local hostnames to IP addresses without a DNS server.&lt;/li&gt;&#xA;&lt;li&gt;Support for mDNS Records – Handles &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;PTR&lt;/code&gt;, &lt;code&gt;SRV&lt;/code&gt;, and &lt;code&gt;TXT&lt;/code&gt; records.&lt;/li&gt;&#xA;&lt;li&gt;Event-Driven Service Discovery – Listens for changes in available services in real-time.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;limitations--areas-for-improvement&#34;&gt;Limitations &amp;amp; Areas for Improvement&lt;/h4&gt;&#xA;&lt;p&gt;While the system is functional, the following enhancements are planned:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

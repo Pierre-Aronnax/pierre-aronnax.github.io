@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus Key Storage on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/v.0.1.0/key-storage/</link>
+    <description>Recent content in Nautilus Key Storage on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v.0.1.0/key-storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Nautilus Key Storage</title>
+      <link>http://localhost:1313/docs/v.0.1.0/key-storage/what-is-nautilus-key-storage/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/key-storage/what-is-nautilus-key-storage/</guid>
+      <description>Learn how Nautilus Key Storage provides a secure, modular, and extensible system for managing cryptographic keys across various platforms.</description>
+    </item>
+    <item>
+      <title>Crate Architecture</title>
+      <link>http://localhost:1313/docs/v.0.1.0/key-storage/crate-architecture/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/key-storage/crate-architecture/</guid>
+      <description>Learn how Nautilus PKI is structured, how it uses Rust traits for extensibility, and how it integrates various cryptographic schemes.</description>
+    </item>
+    <item>
+      <title>Integrating new Storage</title>
+      <link>http://localhost:1313/docs/v.0.1.0/key-storage/integrating-new-storage/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/key-storage/integrating-new-storage/</guid>
+      <description>&lt;p&gt;Nautilus Key Storage is designed with a modular and extensible architecture, enabling developers to add their own storage backends without modifying the core infrastructure. By leveraging Rust traits, new storage solutions can seamlessly integrate into the system while maintaining compatibility with existing backends.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/docs/v.0.1.0/key-storage/roadmap/</link>
+      <pubDate>Thu, 07 Sep 2023 16:12:37 +0200</pubDate>
+      <guid>http://localhost:1313/docs/v.0.1.0/key-storage/roadmap/</guid>
+      <description>&lt;p&gt;Nautilus Key Storage is constantly evolving to meet the needs of modern cryptographic security and key management. The roadmap is structured into multiple phases, each targeting specific improvements in security, performance, and feature expansion.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

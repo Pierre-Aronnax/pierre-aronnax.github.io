@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nautilus on Pierre Aronnax</title>
+    <link>http://localhost:1313/docs/nautilus/</link>
+    <description>Recent content in Nautilus on Pierre Aronnax</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2025- Nautilus</copyright>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/nautilus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nautilus and What is it about</title>
+      <link>http://localhost:1313/docs/nautilus/nautilus-and-what-is-it-about/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/nautilus-and-what-is-it-about/</guid>
+      <description>Nautilus is a pioneering decentralized framework for developing dApps that utilize post-quantum cryptography (PQC) for security.</description>
+    </item>
+    <item>
+      <title>Why Does This Matter?</title>
+      <link>http://localhost:1313/docs/nautilus/why-does-this-matter/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/why-does-this-matter/</guid>
+      <description>Nautilus empowers developers to build a new generation of decentralized applications with post-quantum security.</description>
+    </item>
+    <item>
+      <title>Why Choose Nautilus?</title>
+      <link>http://localhost:1313/docs/nautilus/why-choose-nautilus/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/why-choose-nautilus/</guid>
+      <description>Nautilus is the first decentralized framework designed with post-quantum security, modular extensibility, and seamless interoperability.</description>
+    </item>
+    <item>
+      <title>Nautilus Releases</title>
+      <link>http://localhost:1313/docs/nautilus/nautilus-releases/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nautilus/nautilus-releases/</guid>
+      <description>This section provides detailed release notes, version history, and code documentation for Nautilus.</description>
+    </item>
+  </channel>
+</rss>
